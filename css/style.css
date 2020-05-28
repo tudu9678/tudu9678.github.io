@@ -1,0 +1,45 @@
+
+html, body {
+    height: 100%;
+    width: 100%;
+    color: #222;
+    font-size: 1.1em !important;
+}
+.content {
+    padding-top:150px;
+}
+.navbar {
+    padding: .2rem;
+}
+.navbar-nav li {
+    padding-right: 20px;
+}
+.nav-link{
+    font-size: 1.3em !important;
+    white-space: nowrap;
+    }
+
+.icon{
+    width: 70px;
+}
+
+.text-custom{
+    color: #854496;
+}
+.padding {
+    padding: 50px;
+}
+.jumbotron {
+    padding : 1rem;
+    border-radius: 0;
+}
+.btn-primary {
+    background-color: #854496 !important;
+    border-color: #854496 !important;
+}
+
+
+.form {
+    width: 80%;
+}
+
