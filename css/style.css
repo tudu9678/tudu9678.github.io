@@ -36,10 +36,9 @@ html, body {
 .btn-primary {
     background-color: #854496 !important;
     border-color: #854496 !important;
+    word-wrap: break-word !important;
+    white-space: normal !important;
 }
 
 
-.form {
-    width: 80%;
-}
 
