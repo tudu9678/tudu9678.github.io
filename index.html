@@ -15,41 +15,37 @@
     <link href="css/style.css" rel="stylesheet">
     
 </head>
-<body>
-    <header>
+<body id="page-top">
  <!-- Navigation -->
- <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light text-center">
+ <nav class=" navbar navbar-expand-md navbar-light fixed-top bg-light text-center" id="myNavbar" data-toggle="affix">
     <div class="container-fluid ">
-        <a class="navbar-brand" href="#"><img src="img/logo.png"></a> 
+        <a class="navbar-brand js-scroll-trigger " href="#page-top" ><img src="img/logo.png"></a> 
         <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" 
         data-target="#navbarResponsive">
-            <span><img src="img/icon/menu.png" class=""></span>
+            <span><img src="img/icon/menu.png" id="logo"></span>
         </button>
     </div>
     <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav">
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Trang chủ</a>
+            <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#page-top">Trang chủ</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Dịch vụ</a>
+                <a class="nav-link js-scroll-trigger " href="#service">Dịch vụ</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Đăng kí nhanh</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Địa chỉ</a>
+                <a class="nav-link js-scroll-trigger" href="#signIn">Đăng kí nhanh</a>
             </li>
             <li class="nav-item text-nowrap">
-                <a class="nav-link" href="#">Liên hệ</a>
+                <a class="nav-link js-scroll-trigger" href="#contact">Liên hệ</a>
             </li>
 
     </div>
 </nav>
-    </header>
-    <div class="content">
-     <!-- Image Slider-->
-     <div id="slides" class="carousel slide " data-ride="carousel">
+    <!-- Masthead-->
+    <header class="masthead text-center  ">
+                     <!-- Image Slider-->
+     <div id="slides" class="carousel slide" data-ride="carousel">
         <ul class="carousel-indicators">
             <li data-target="#slides" data-slide-to="0" class="active"></li>
             <li data-target="#slides" data-slide-to="1" ></li>
@@ -57,27 +53,30 @@
         </ul>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img class="d-block w-100" src="img/slide/slide4.jpg">
+                <img class="d-block w-100 " src="img/slide/slide4.jpg">
             </div>
             <div class="carousel-item ">
-                <img class="d-block w-100" src="img/slide/slide4.jpg">
+                <img class="d-block w-100 " src="img/slide/slide4.jpg">
             </div>
             <div class="carousel-item ">
-                <img class="d-block w-100" src="img/slide/slide4.jpg">
+                <img class="d-block w-100 " src="img/slide/slide4.jpg">
             </div>
         </div>
     </div>
+    </header>
+    <div class="content">
     <!-- Welcome Section -->
-    <div class="container-fluid padding">
-        <div class="row welcome text-center">
-            <div class="col-12 mt-5 ">
-                <p class="display-4 text-custom">VAY TIÊU DÙNG TP BANK</p>
-                <h3 class="lead">ƯU ĐÃI KHÔNG LO LÃI</h4>
+    <section class="page-section " id="service">
+        <div class="container-fluid padding">
+            <div class="row welcome text-center padding">
+                <div class="col-12">
+                    <p class="display-4 text-custom page-section-heading ">VAY TIÊU DÙNG TP BANK</p>
+                    <h3 class="lead">ƯU ĐÃI KHÔNG LO LÃI</h4>
+                </div>
+                <hr>
             </div>
-            <hr>
         </div>
-    </div>
-    <!-- Three Column Section -->
+         <!-- Three Column Section -->
     <div class="container-fluid padding">
         <div class="row welcome text-center padding">
             <div class="col-xs-12 col-sm-6 col-md-4 ">
@@ -100,133 +99,135 @@
     <div class="padding">
         <hr>
     </div>
-    <div class="container-fluid padding row">
-        <div class="col-md-12 col-lg-6">
-            <p class="display-4 text-custom">Sơ lược về Tiền Phong Bank</p>
-                <h3 class="lead">Ngân hàng Thương mại Cổ phần Tiên Phong (gọi tắt là “TPBank”) được thành lập từ ngày 05/05/2008 với khát vọng trở thành một tổ chức tài chính minh bạch, 
-                    hiệu quả, bền vững, mang lại lợi ích tốt nhất cho cổ đông và khách hàng.
-                     TPBank được kế thừa những thế mạnh về công nghệ hiện đại, kinh nghiệm thị
-                      trường cùng tiềm lực tài chính của các cổ đông chiến lược bao gồm:Tập
-                       đoàn Vàng bạc Đá quý DOJI, Tập đoàn Công nghệ FPT, Công ty Tài chính 
-                       quốc tế (IFC), Tổng công ty Tái bảo hiểm Việt Nam (Vinare) và Tập đoàn
-                        Tài chính SBI Ven Holding Pte. Ltd.,Singapore.</h3>
-                        <button type="submit" class="btn btn-lg  btn-primary m-2 float-right ">Liên hệ</button>
-                        <button type="submit" class="btn btn-lg btn-primary m-2 float-right">Thông tin</button>
-        </div>
-        <div class="col-md-12 col-lg-6">
-            <img src="img/tpbank.jfif" class="img-fluid">
-        </div>
-        
-    </div>
-    <div class="container-fluid padding row">
-        <div class="col-md-12 col-lg-6">
-            <img src="img/bg2.jpg" class="img-fluid">
-        </div>
-        <div class="col-md-12 col-lg-6 ">
-            <div class=" d-flex justify-content-end">
-                <div>
-                    <p class="display-4 text-custom">Lựa chọn TPBank</p>
-                    <h3 class="lead">
-                        <ul class="list-unstyled">
-                            <li>Thủ tục nhanh gọn</li>
-                            <li>Giải ngân nhanh chóng</li>
-                            <li>Lãi suất ưu đãi với từng gói vayg</li>
-                            <li>Không cần thế chấp tài sản</li>
-                            <li>Không tốn bất kỳ chi phí nào</li>
-                            <li>Đã vay ngân hàng vẫn có thể vay</li>
-                            <li>Bảo mật thông tin</li>
-                            <li>Hỗ trợ kiểm tra lịch sử tín dụng miễn phí</li>
-    
-                        </ul>
-                    </h3>
-                </div>
-               
-            </div>
-          
-                       
-        </div>
-       
-        
-    </div>
-    <!-- Jumbotron -->
-    <div class="container-fluid padding ">
-        <div class="row jumbotron ">
-            <div class=" col-xs-12 col-sm-6 row d-flex align-items-center ">
-                <div class="col-12 text-center padding">
-                    <h3 class="text-custom ">ĐĂNG KÝ VAY TIÊU DÙNG</h3>
-                    <p class="">Chúng tôi đã giúp hàng nghìn khách hàng tìm được khoản vay như ý. Với nhiều gói vay đa dạng nhất thị trường,
-                        chúng tôi tự tin sẽ giúp bạn thực hiện giấc mơ và tối ưu hiệu quả đầu tư.</p>
-                </div>
-                    
-            </div>
-            <div class="col-xs-12 col-sm-6  padding">
-                <div class="">
-                    <form class="form">
-                        <div class="form-group">
-                          <label for="inputName">Tên của bạn</label>
-                          <input type="text" class="form-control" id="inputName" aria-describedby="emailHelp" >
-                        </div>
-                        <div class="form-group">
-                            <label for="inputNumberPhone">Số điện thoại</label>
-                            <input type="number" class="form-control" id="inputNumberPhone"  >
-                          </div>
-                          <div class='form-group' id='datetimepicker1'>
-                            <label for="datepicker">Ngày sinh</label>
-                            <input type="text" class="form-control" id="datepicker" placeholder="MM/DD/YYYY">
-                          </div>
-                       <div class="form-group">
-                            <label for="inputID">Số CMND</label>
-                            <input type="number" class="form-control" id="inputID" >
-                          </div>
-                          <div class="form-group">
-                            <label for="inputID">Sản phẩm vay</label>
-                            <div class="dropdown">
-                                <button class="btn btn-primary btn-block  dropdown-toggle " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
-                                    Vui lòng chọn sản phẩm vay
-                                </button>
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-                                  <a class="dropdown-item">Lương chuyển khoản có BHYT</a>
-                                  <a class="dropdown-item">Lương tiền mặt có BHYT</a>
-                                  <a class="dropdown-item">Điện nước chính chủ</a>
-                                  <a class="dropdown-item">Đang vay tổ chức khác </a>
-                                </div>
-                              </div>
-                          </div>
-                          <div class="form-group">
-                            <label for="inputID">Thu nhập</label>
-                            <div class="dropdown">
-                                <button class="btn btn-primary btn-block dropdown-toggle " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                  Vui lòng chọn mức thu nhập 
-                                </button>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                  <a class="dropdown-item">Từ 5 - 7 triệu</a>
-                                  <a class="dropdown-item">Từ 8 - 14 triệu</a>
-                                  <a class="dropdown-item">Từ 15 triệu trở lên</a>
-    
-                                </div>
-                              </div>
-                          </div>
-                          <div class="">
-                            <button type="submit" class="btn float-right btn-primary">Gửi</button>
-                          </div>
-                          
-                        
-                      </form>
-                </div>
-               
-            </div>
-            
-            
-        </div>
-
         <div class="container-fluid padding row">
             <div class="col-md-12 col-lg-6">
+                <p class="display-4 text-custom">Sơ lược về Tiền Phong Bank</p>
+                    <h3 class="lead">Ngân hàng Thương mại Cổ phần Tiên Phong (gọi tắt là “TPBank”) được thành lập từ ngày 05/05/2008 với khát vọng trở thành một tổ chức tài chính minh bạch, 
+                        hiệu quả, bền vững, mang lại lợi ích tốt nhất cho cổ đông và khách hàng.
+                         TPBank được kế thừa những thế mạnh về công nghệ hiện đại, kinh nghiệm thị
+                          trường cùng tiềm lực tài chính của các cổ đông chiến lược bao gồm:Tập
+                           đoàn Vàng bạc Đá quý DOJI, Tập đoàn Công nghệ FPT, Công ty Tài chính 
+                           quốc tế (IFC), Tổng công ty Tái bảo hiểm Việt Nam (Vinare) và Tập đoàn
+                            Tài chính SBI Ven Holding Pte. Ltd.,Singapore.</h3>
+                            <button type="submit" class="btn btn-lg  btn-primary m-2 float-right ">Liên hệ</button>
+                            <button type="submit" class="btn btn-lg btn-primary m-2 float-right">Thông tin</button>
+            </div>
+            <div class="col-md-12 col-lg-6">
+                <img src="img/tpbank.jfif" class="img-fluid">
+            </div>
+            
+        </div>
+        <div class="container-fluid padding row">
+            <div class="col-md-12 col-lg-6">
+                <img src="img/bg2.jpg" class="img-fluid">
+            </div>
+            <div class="col-md-12 col-lg-6 ">
+                <div class=" d-flex justify-content-end">
+                    <div>
+                        <p class="display-4 text-custom">Lựa chọn TPBank</p>
+                        <h3 class="lead">
+                            <ul class="list-unstyled">
+                                <li>Thủ tục nhanh gọn</li>
+                                <li>Giải ngân nhanh chóng</li>
+                                <li>Lãi suất ưu đãi với từng gói vayg</li>
+                                <li>Không cần thế chấp tài sản</li>
+                                <li>Không tốn bất kỳ chi phí nào</li>
+                                <li>Đã vay ngân hàng vẫn có thể vay</li>
+                                <li>Bảo mật thông tin</li>
+                                <li>Hỗ trợ kiểm tra lịch sử tín dụng miễn phí</li>
+        
+                            </ul>
+                        </h3>
+                    </div>
+                   
+                </div>
+              
+                           
+            </div>
+           
+            
+        </div>
+    </section>
+  
+    <section class="page-section" id="signIn">
+ <!-- Jumbotron -->
+ <div class="container-fluid padding ">
+    <div class="row jumbotron ">
+        <div class=" col-xs-12 col-sm-6 row d-flex align-items-center ">
+            <div class="col-12 text-center padding">
+                <h3 class="text-custom ">ĐĂNG KÝ VAY TIÊU DÙNG</h3>
+                <p class="">Chúng tôi đã giúp hàng nghìn khách hàng tìm được khoản vay như ý. Với nhiều gói vay đa dạng nhất thị trường,
+                    chúng tôi tự tin sẽ giúp bạn thực hiện giấc mơ và tối ưu hiệu quả đầu tư.</p>
+            </div>
+                
+        </div>
+        <div class="col-xs-12 col-sm-6  padding ">
+            <div id="formInfo" class="">
+                <form action="" method="" id="registration">
+                    <div class="form-group">
+                      <label for="inputName">Tên của bạn</label>
+                      <input type="text" class="form-control" name="inputName" id="inputName">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputNumberPhone">Số điện thoại</label>
+                        <input type="number" class="form-control" id="inputNumberPhone"  >
+                      </div>
+                      <div class='form-group' id='datetimepicker1'>
+                        <label for="datepicker">Ngày sinh</label>
+                        <input type="text" class="form-control" id="datepicker" placeholder="MM/DD/YYYY" > 
+                      </div>
+                   <div class="form-group">
+                        <label for="inputID">Số CMND</label>
+                        <input type="number" class="form-control" id="inputID" >
+                      </div>
+                      <div class="form-group">
+                        <label for="inputID">Sản phẩm vay</label>
+                        <div class="dropdown">
+                            <button class="btn btn-primary btn-block  dropdown-toggle " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+                                Vui lòng chọn sản phẩm vay
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                              <a class="dropdown-item">Lương chuyển khoản có BHYT</a>
+                              <a class="dropdown-item">Lương tiền mặt có BHYT</a>
+                              <a class="dropdown-item">Điện nước chính chủ</a>
+                              <a class="dropdown-item">Đang vay tổ chức khác </a>
+                            </div>
+                          </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="inputID">Thu nhập</label>
+                        <div class="dropdown">
+                            <button class="btn btn-primary btn-block dropdown-toggle " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              Vui lòng chọn mức thu nhập 
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                              <a class="dropdown-item">Từ 5 - 7 triệu</a>
+                              <a class="dropdown-item">Từ 8 - 14 triệu</a>
+                              <a class="dropdown-item">Từ 15 triệu trở lên</a>
+
+                            </div>
+                          </div>
+                      </div>
+                      <div class="">
+                        <button  id="btnSubmit" type="submit" class="btn float-right btn-primary">Gửi</button>
+                      </div>
+                      
+                    
+                  </form>
+            </div>       
+        </div>
+    </div>
+</div>
+    </section> 
+    <section class="page-section " id="contact">
+        <div class="container-fluid padding row">
+            <div class="col-md-12 col-lg-6 padding">
                 <p class="display-4 text-custom">Liên hệ</p>
                     <h3 class="lead">Ngân hàng Tiên Phong TPbank</h3>
                     <h3 class="lead">Địa chỉ : 19B kỳ đồng - phường 9 - quận 3</h3>
-                    <h3 class="lead">Nhân viên : Lorem ipsum dolor</h3>
-                    <h3 class="lead">Số điện thoại : 09xxxxxxxxx</h3>
-                    <h3 class="lead">Mail : abc@gmail.com</h3>  
+                    <h3 class="lead">Tư vấn viên : Mr.Đệ</h3>
+                    <h3 class="lead">Số điện thoại : 0935019638</h3>
+                    <h3 class="lead">Mail : nhatde1201.goweb@gmail.com</h3>  
                                
             </div>
             <div class="col-md-12 col-lg-6">
@@ -234,10 +235,10 @@
             </div>
             
         </div>
-    </div>
-
+    </section>
+    
      <!-- Scroll to Top Button-->
-  <a class="toTop rounded d-flex justify-content-end fixed-bottom m-5" href="#page-top">
+  <a class="toTop rounded d-flex justify-content-end fixed-bottom" href="#page-top">
     <img src="img/icon/up_squared_50px.png">
   </a>
     </div>
