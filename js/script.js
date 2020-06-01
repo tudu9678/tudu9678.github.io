@@ -1,4 +1,4 @@
-$('#datepicker').datepicker();
+$('#datetimepicker1').datepicker();
 
 $('.toTop').on('click', function(event) {
     event.preventDefault();
@@ -44,35 +44,58 @@ $('.toTop').on('click', function(event) {
       }
     });
   });
+
+$('.dropdown-menu a').click(function(){
+    $(this).parent().parent().find('button span').html($(this).text());
+    $(this).parent().parent().find('button span').data('value',$(this).data('value'))
+})
+
+$(document).ready(function(){
+
+    $("#registration").validate({  
+      rules : {
+        inputName : {
+          required : true,
+        },
+        inputNumberPhone : {
+          required : true,
+          minlength : 10,
+        },
+        datetimepicker1 : "required",
+        inputID : "required",
+
   
- $('#navbarResponsive a').click(function(){
-    $('#logo').click();
- })
-
-
-//  $(function(){
-//    $("form[name='registration']".validate({
-//      rules: {
-//        inputName : "required"
-//      },
-//      messages : {
-//        inputName : "Vui lòng nhập họ tên "
-//      }, 
-//      submitHandler : function (form) {
-//        form.submit();
-//      }
-//    }))
-//  })
-$(document).ready(function (){
-  $("#registration").validate({
-    rules : {
-      inputName : "required",
-
-    },
-    messages : {
-      inputName : {
-        required : "Vui lòng nhập tên",
-      },  
-    },
-  });
-});
+      },
+      messages : {
+        inputName : {
+          required : "Vui lòng nhập tên",
+        },  
+        inputNumberPhone : {
+          required  : "Vui lòng số điện thoại",
+          minlength : "Số điện thoại phải có 10 số",
+        },
+        datetimepicker1 : {
+          required : "Vui lòng nhập ngày sinh",
+        },
+        inputID : {
+          required : "Vui lòng nhập CMND",
+        },
+      },
+    });
+})
+$(document).ready(function(){
+  $('#btnSubmit').click(function(e){
+    if ($('#dropdown1 span').data('value') == 0)
+        alert("Vui lòng " + $('#dropdown1 span').text());
+        e.preventDefault();
+  })
+  
+})
+$(document).ready(function(){
+  $('#btnSubmit').click(function(e){
+    if ($('#dropdown2 span').data('value') == 0)
+        alert("Vui lòng " + $('#dropdown2 span').text());
+        e.preventDefault();
+  })
+  
+})

@@ -53,3 +53,6 @@ html, body {
     padding: 6rem 0;
   }
 
+.error{
+    color: red;
+}

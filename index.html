@@ -9,7 +9,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js" type="text/javascript"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.standalone.min.css" rel="stylesheet"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.min.js"></script>
     <link href="css/style.css" rel="stylesheet">
@@ -167,43 +167,44 @@
                     <div class="form-group">
                       <label for="inputName">Tên của bạn</label>
                       <input type="text" class="form-control" name="inputName" id="inputName">
+
                     </div>
                     <div class="form-group">
                         <label for="inputNumberPhone">Số điện thoại</label>
-                        <input type="number" class="form-control" id="inputNumberPhone"  >
+                        <input type="number" class="form-control" id="inputNumberPhone" name="inputNumberPhone"  >
                       </div>
-                      <div class='form-group' id='datetimepicker1'>
+                      <div class='form-group'>
                         <label for="datepicker">Ngày sinh</label>
-                        <input type="text" class="form-control" id="datepicker" placeholder="MM/DD/YYYY" > 
+                        <input type="text" class="form-control" id="datetimepicker1" placeholder="MM/DD/YYYY" name="datetimepicker1" > 
                       </div>
                    <div class="form-group">
                         <label for="inputID">Số CMND</label>
-                        <input type="number" class="form-control" id="inputID" >
+                        <input type="number" class="form-control" id="inputID" name="inputID" >
                       </div>
                       <div class="form-group">
-                        <label for="inputID">Sản phẩm vay</label>
                         <div class="dropdown">
-                            <button class="btn btn-primary btn-block  dropdown-toggle " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
-                                Vui lòng chọn sản phẩm vay
+                            <label for="dropdown1">Sản phẩm vay</label>
+                            <button class="btn btn-primary btn-block  dropdown-toggle " type="button" id="dropdown1" name="dropdown1" data-toggle="dropdown"  >
+                                <span class="caret"  data-value = 0>Chọn gói muốn vay</span>
                             </button>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-                              <a class="dropdown-item">Lương chuyển khoản có BHYT</a>
-                              <a class="dropdown-item">Lương tiền mặt có BHYT</a>
-                              <a class="dropdown-item">Điện nước chính chủ</a>
-                              <a class="dropdown-item">Đang vay tổ chức khác </a>
+                              <a class="dropdown-item " data-value="1">Lương chuyển khoản có BHYT</a>
+                              <a class="dropdown-item" data-value="2">Lương tiền mặt có BHYT</a>
+                              <a class="dropdown-item" data-value="3">Điện nước chính chủ</a>
+                              <a class="dropdown-item" data-value="4">Đang vay tổ chức khác </a>
                             </div>
                           </div>
                       </div>
                       <div class="form-group">
-                        <label for="inputID">Thu nhập</label>
+                        <label for="dropdown2">Thu nhập</label>
                         <div class="dropdown">
-                            <button class="btn btn-primary btn-block dropdown-toggle " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                              Vui lòng chọn mức thu nhập 
+                            <button class="btn btn-primary btn-block dropdown-toggle " type="button" id="dropdown2" name="dropdown2" data-toggle="dropdown" aria-haspopup="true" >
+                                <span class="caret" data-value = 0>Chọn mức thu nhập</span>
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                              <a class="dropdown-item">Từ 5 - 7 triệu</a>
-                              <a class="dropdown-item">Từ 8 - 14 triệu</a>
-                              <a class="dropdown-item">Từ 15 triệu trở lên</a>
+                              <a class="dropdown-item"  data-value="1">Từ 5 - 7 triệu</a>
+                              <a class="dropdown-item"  data-value="2">Từ 8 - 14 triệu</a>
+                              <a class="dropdown-item"  data-value="3">Từ 15 triệu trở lên</a>
 
                             </div>
                           </div>
