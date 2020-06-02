@@ -5,6 +5,9 @@ html, body {
     color: #222;
     font-size: 1.1em !important;
 }
+#btnCollapse:focus {
+outline: none;
+}
 .content {
     padding-top:150px;
 }
@@ -17,7 +20,7 @@ html, body {
     padding-right: 20px;
 }
 .nav-link{
-    font-size: 1.3em !important;
+    font-size: 1.1em !important;
     white-space: nowrap;
     }
       .navbar.compressed {
@@ -47,7 +50,7 @@ html, body {
     white-space: normal !important;
 }
 .masthead {
-    padding-top: calc(5rem + 100px);
+    padding-top: calc(2rem + 100px);
   }
   .page-section {
     padding: 6rem 0;

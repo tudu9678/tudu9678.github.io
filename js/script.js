@@ -45,6 +45,10 @@ $('.toTop').on('click', function(event) {
     });
   });
 
+$('#navbarResponsive a').click(function(){
+  $('.navbar-toggler').click();
+})
+
 $('.dropdown-menu a').click(function(){
     $(this).parent().parent().find('button span').html($(this).text());
     $(this).parent().parent().find('button span').data('value',$(this).data('value'))
@@ -52,7 +56,9 @@ $('.dropdown-menu a').click(function(){
 
 $(document).ready(function(){
 
+
     $("#registration").validate({  
+      onsubmit: true,
       rules : {
         inputName : {
           required : true,
@@ -63,7 +69,12 @@ $(document).ready(function(){
         },
         datetimepicker1 : "required",
         inputID : "required",
-
+        inputGroupSelect1 : {
+          required : true,
+        },
+        inputGroupSelect2 : {
+          required : true,
+        }
   
       },
       messages : {
@@ -80,22 +91,27 @@ $(document).ready(function(){
         inputID : {
           required : "Vui lòng nhập CMND",
         },
+        inputGroupSelect1 : {
+          required : "Vui lòng chọn sản phẩm vay",
+        },
+        inputGroupSelect2 : {
+          required : "Vui lòng chọn mức thu nhập",
+        }
       },
     });
-})
-$(document).ready(function(){
-  $('#btnSubmit').click(function(e){
-    if ($('#dropdown1 span').data('value') == 0)
-        alert("Vui lòng " + $('#dropdown1 span').text());
-        e.preventDefault();
-  })
+
+    // $('#btnSubmit').click(function(e){
+    //   if ($('#dropdown1 span').data('value') == 0)
+    //       alert("Vui lòng " + $('#dropdown1 span').text());
+         
+    // })
+  
+    // $('#btnSubmit').click(function(e){
+    //   if ($('#dropdown2 span').data('value') == 0)
+    //       alert("Vui lòng " + $('#dropdown2 span').text());
+          
+    // })
   
 })
-$(document).ready(function(){
-  $('#btnSubmit').click(function(e){
-    if ($('#dropdown2 span').data('value') == 0)
-        alert("Vui lòng " + $('#dropdown2 span').text());
-        e.preventDefault();
-  })
-  
-})
+
+ 

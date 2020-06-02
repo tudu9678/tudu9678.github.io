@@ -20,9 +20,9 @@
  <nav class=" navbar navbar-expand-md navbar-light fixed-top bg-light text-center" id="myNavbar" data-toggle="affix">
     <div class="container-fluid ">
         <a class="navbar-brand js-scroll-trigger " href="#page-top" ><img src="img/logo.png"></a> 
-        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" 
+        <button id ="btnCollapse"class="navbar-toggler ml-auto border-0" type="button" data-toggle="collapse" 
         data-target="#navbarResponsive">
-            <span><img src="img/icon/menu.png" id="logo"></span>
+            <span><img src="img/icon/menu.png" class="w-50 " id="logo"></span>
         </button>
     </div>
     <div class="collapse navbar-collapse" id="navbarResponsive">
@@ -67,8 +67,8 @@
     <div class="content">
     <!-- Welcome Section -->
     <section class="page-section " id="service">
-        <div class="container-fluid padding">
-            <div class="row welcome text-center padding">
+        <div class="container-fluid ">
+            <div class="row welcome text-center">
                 <div class="col-12">
                     <p class="display-4 text-custom page-section-heading ">VAY TIÊU DÙNG TP BANK</p>
                     <h3 class="lead">ƯU ĐÃI KHÔNG LO LÃI</h4>
@@ -182,33 +182,24 @@
                         <input type="number" class="form-control" id="inputID" name="inputID" >
                       </div>
                       <div class="form-group">
-                        <div class="dropdown">
-                            <label for="dropdown1">Sản phẩm vay</label>
-                            <button class="btn btn-primary btn-block  dropdown-toggle " type="button" id="dropdown1" name="dropdown1" data-toggle="dropdown"  >
-                                <span class="caret"  data-value = 0>Chọn gói muốn vay</span>
-                            </button>
-                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-                              <a class="dropdown-item " data-value="1">Lương chuyển khoản có BHYT</a>
-                              <a class="dropdown-item" data-value="2">Lương tiền mặt có BHYT</a>
-                              <a class="dropdown-item" data-value="3">Điện nước chính chủ</a>
-                              <a class="dropdown-item" data-value="4">Đang vay tổ chức khác </a>
-                            </div>
-                          </div>
-                      </div>
-                      <div class="form-group">
-                        <label for="dropdown2">Thu nhập</label>
-                        <div class="dropdown">
-                            <button class="btn btn-primary btn-block dropdown-toggle " type="button" id="dropdown2" name="dropdown2" data-toggle="dropdown" aria-haspopup="true" >
-                                <span class="caret" data-value = 0>Chọn mức thu nhập</span>
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                              <a class="dropdown-item"  data-value="1">Từ 5 - 7 triệu</a>
-                              <a class="dropdown-item"  data-value="2">Từ 8 - 14 triệu</a>
-                              <a class="dropdown-item"  data-value="3">Từ 15 triệu trở lên</a>
-
-                            </div>
-                          </div>
-                      </div>
+                            <label for="inputGroupSelect1">Sản phẩm vay</label>
+                                <select class="custom-select" name="inputGroupSelect1" id="inputGroupSelect1">
+                                  <option selected value="">Chọn sản phẩm vay</option>
+                                  <option value="1">Lương chuyển khoản có BHYT</option>
+                                  <option value="2">Lương tiền mặt có BHYT</option>
+                                  <option value="3">Điện nước chính chủ</option>
+                                  <option value="4">Đang vay tổ chức khác</option>
+                                </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputGroupSelect2">Thu nhập</label>
+                                <select class="custom-select" name="inputGroupSelect2" id="inputGroupSelect2" >
+                                  <option selected value="">Chọn mức thu nhập</option>
+                                  <option value="1">Từ 5 - 7 triệu</option>
+                                  <option value="2">Từ 8 - 14 triệu</option>
+                                  <option value="3">Từ 15 triệu trở lên</option>
+                                </select>
+                        </div>
                       <div class="">
                         <button  id="btnSubmit" type="submit" class="btn float-right btn-primary">Gửi</button>
                       </div>
@@ -239,9 +230,12 @@
     </section>
     
      <!-- Scroll to Top Button-->
-  <a class="toTop rounded d-flex justify-content-end fixed-bottom" href="#page-top">
-    <img src="img/icon/up_squared_50px.png">
-  </a>
+     <div class="d-inline m-3">
+        <a class=" toTop rounded  " href="#page-top">
+            <img src="img/icon/up_squared_50px.png">
+          </a>
+     </div>
+  
     </div>
 
      <!-- Footer -->
