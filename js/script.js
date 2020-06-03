@@ -49,10 +49,7 @@ $('#navbarResponsive a').click(function(){
   $('.navbar-toggler').click();
 })
 
-$('.dropdown-menu a').click(function(){
-    $(this).parent().parent().find('button span').html($(this).text());
-    $(this).parent().parent().find('button span').data('value',$(this).data('value'))
-})
+
 
 $(document).ready(function(){
 
@@ -100,18 +97,63 @@ $(document).ready(function(){
       },
     });
 
-    // $('#btnSubmit').click(function(e){
-    //   if ($('#dropdown1 span').data('value') == 0)
-    //       alert("Vui lòng " + $('#dropdown1 span').text());
-         
-    // })
-  
-    // $('#btnSubmit').click(function(e){
-    //   if ($('#dropdown2 span').data('value') == 0)
-    //       alert("Vui lòng " + $('#dropdown2 span').text());
-          
-    // })
   
 })
 
+$('#btnSubmit').click(function() {
+  if ($('#registration').valid()){
+    $('#registration').submit();
+    var d = new Date(); 
+  var result  = d.toLocaleString(); 
+  var name = $('#inputName').val();
+  var number = $('#inputNumberPhone').val();
+  var birthday = $('#datetimepicker1').val();
+  var cmnd = $('#inputID').val();
+  var dropdown1 = $('#inputGroupSelect1 option:selected').html();
+  var dropdown2 = $('#inputGroupSelect2 option:selected').html();
+          Email.send({
+        SecureToken : "42952ebf-0573-4475-ba6f-2271d61a97cc",
+        To : 'nhatde1201.goweb@gmail.com',
+        From : "xalmon1405@gmail.com",
+        Subject : "Thông tin người cần vay",
+        Body : "Thời gian : " + result   + "<br>"
+              +"Họ tên : " + name + "<br>"
+              +"Số điện thoại : " + number + "<br>"
+              +"Ngày sinh : " + birthday + "<br>"
+              +"Số CMND : " + cmnd + "<br>"
+              +"Sản phẩm vay : " + dropdown1  + "<br>"
+              +"Thu nhập : " + dropdown2 +"<br>",
+
+      }).then(
+      message => alert(message),
+      );
+      alert("Thông tin của bạn đã được gửi , chúng tôi sẽ liên hệ với bạn sớm nhất . Xin cảm ơn !");
+      
+      var url = 'https://script.google.com/macros/s/AKfycbxzQ9AXJpXLGqqB_8Usk3wSPgZD-KPR59d3XWQaz63o9pU8IQ4/exec';
+
+      var data = {
+          inputName: name,
+          inputNumberPhone: number,
+          datetimepicker1:birthday,
+          inputID:cmnd,
+          inputGroupSelect1:dropdown1,
+          inputGroupSelect2:dropdown2,
+          result:result
+        };
+        $.ajax({
+          type: "GET",
+          url: url,
+          header: "Access-Control-Allow-Origin: *",
+          data: data,
+          crossDomain: true,
+          success: function(data){
+            console.log(data);
+          },
+          error: () => {
+            console.log('Error');
+          },
+        });
+      }
  
+})
+
