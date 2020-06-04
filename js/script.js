@@ -145,13 +145,7 @@ $('#btnSubmit').click(function() {
           url: url,
           header: "Access-Control-Allow-Origin: *",
           data: data,
-          crossDomain: true,
-          success: function(data){
-            console.log(data);
-          },
-          error: () => {
-            console.log('Error');
-          },
+          crossDomain: true
         });
       }
  
