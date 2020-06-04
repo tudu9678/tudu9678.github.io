@@ -113,7 +113,7 @@ $('#btnSubmit').click(function() {
   var dropdown2 = $('#inputGroupSelect2 option:selected').html();
           Email.send({
         SecureToken : "42952ebf-0573-4475-ba6f-2271d61a97cc",
-        To : 'nhatde1201.goweb@gmail.com',
+        To : 'nhatde1201.gooweb@gmail.com',
         From : "xalmon1405@gmail.com",
         Subject : "Thông tin người cần vay",
         Body : "Thời gian : " + result   + "<br>"
